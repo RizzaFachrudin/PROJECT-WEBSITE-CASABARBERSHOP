@@ -64,6 +64,8 @@ class UserHomeController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100',
+            'number' => 'required|string|max:14',
+            'email' => 'required|email|unique:users,email',
         ]);
 
         $user = Auth::user();
