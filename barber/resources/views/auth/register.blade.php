@@ -48,7 +48,7 @@
                             @csrf
 
                             <div class="form-group">
-                                <input type="text" class="form-control" name="username" required placeholder="Username">
+                                <input type="text" class="form-control" name="nama" required placeholder="Username">
                             </div>
 
                             <div class="form-group mt-2">
