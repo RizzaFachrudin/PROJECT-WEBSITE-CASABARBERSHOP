@@ -87,13 +87,11 @@ Route::get('/', function () {
 // User Authentication Routes
 Route::get('user/login', [UserLoginController::class, 'showLoginForm'])->name('user.login');
 Route::post('user/login', [UserLoginController::class, 'login'])->name('user.login.submit');
+Route::post('user/logout', [UserLoginController::class, 'logout'])->name('user.logout');
 
 // User Registration Routes
 Route::get('user/register', [RegisterController::class, 'showRegistrationForm'])->name('user.register');
 Route::post('user/register', [RegisterController::class, 'register'])->name('user.register.submit');
-
-// User Logout Route
-Route::post('user/logout', [UserLoginController::class, 'logout'])->name('user.logout');
 
 //User Booking Route
 Route::get('user/booking', [BookingController::class, 'create'])->name('booking.form');
