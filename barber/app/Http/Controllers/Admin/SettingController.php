@@ -38,14 +38,14 @@ class SettingController extends Controller
         }
     }
 
-    // showPage() -> Tampilan about-us.php & location.php
+    // showPage() -> Tampilan about us & location
     public function showPage($type)
     {
         $page = Page::where('PageType', $type)->first();
         return view('admin.settings.page', compact('page', 'type'));
     }
 
-    // updatePage() -> Proses about-us.php & location.php
+    // updatePage() -> Proses about-us & location
     public function updatePage(Request $request, $type)
     {
         $page = Page::where('PageType', $type)->first();
